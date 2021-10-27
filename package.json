@@ -1,0 +1,26 @@
+{
+  "name": "zookeeper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maplesyrupman/zookeeper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maplesyrupman/zookeeper/issues"
+  },
+  "homepage": "https://github.com/maplesyrupman/zookeeper#readme",
+  "devDependencies": {
+    "node-fetch": "^3.0.0",
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
