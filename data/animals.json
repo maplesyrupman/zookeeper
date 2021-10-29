@@ -127,6 +127,18 @@
         "loving"
       ],
       "id": "12"
+    },
+    {
+      "name": "max",
+      "species": "dog",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious",
+        "loving"
+      ],
+      "id": "13"
     }
   ]
 }

@@ -10,6 +10,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }))
 //parse incoming json data
 app.use(express.json())
+//provides routes for assets in public
+app.use(express.static('public'))
 
 const filterByQuery = (query, animalsArray) => {
     let personalityTraitsArray = [];
@@ -78,7 +80,23 @@ app.get('/api/animals/:id', (req, res) => {
     }
     else {
         res.sendStatus(404);
-    }
+}
+})
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+})
+
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'))
+})
+
+app.get('/zookeepers', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/zookeepers.html'))
+})
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'))
 })
 
 app.post('/api/animals', (req, res) => {
