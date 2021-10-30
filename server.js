@@ -13,10 +13,11 @@ const htmlRoutes = require('./routes/htmlRoutes')
 app.use(express.urlencoded({ extended: true }))
 //parse incoming json data
 app.use(express.json())
-app.use('/api', apiRoutes)
-app.use('/', htmlRoutes)
+
 //provides routes for assets in public
 app.use(express.static('public'))
+app.use('/api', apiRoutes)
+app.use('/', htmlRoutes)
 
 
 app.listen(PORT, () => {
