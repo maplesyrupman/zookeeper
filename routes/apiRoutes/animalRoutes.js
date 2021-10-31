@@ -5,7 +5,7 @@ const animals = require('../../data/animals.json')
 router.get('/animals/:id', (req, res) => {
     const result = findById(req.params.id, animals);
     if (result) {
-        res.json(result);;
+        res.json(result);
     }
     else {
         res.sendStatus(404);
